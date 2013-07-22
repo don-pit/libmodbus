@@ -1,0 +1,8 @@
+»сходные тексты основаны на коммите b09ff2fbb4d08205ee2f3fed7d370e4f79247117
+репозитори€ https://github.com/stephane/libmodbus со следующими изменени€ми:
+- настройка состава подключаемых заголовочных файлов дерективами препроцессора
+  и устранение ошибок компил€ции в среде C++ Builder XE3;
+- применение патча дл€ неблокирующего сокета в Win32, опубликованного по
+адресу в ветке `win32_nonblock_sock` репозитори€
+https://github.com/don-pit/libmodbus
+(pull-request https://github.com/stephane/libmodbus/pull/100)
