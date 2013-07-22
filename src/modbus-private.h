@@ -21,12 +21,17 @@
 
 #ifndef _MSC_VER
 # include <stdint.h>
-# include <sys/time.h>
 #else
 # include "stdint.h"
-# include <time.h>
 typedef int ssize_t;
 #endif
+
+#if !(_MSC_VER || __BORLANDC__)
+# include <sys/time.h>
+#else
+# include <time.h>
+#endif
+
 #include <sys/types.h>
 #include <config.h>
 

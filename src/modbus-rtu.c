@@ -21,7 +21,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <string.h>
-#ifndef _MSC_VER
+#if !(_MSC_VER || __BORLANDC__)
 #include <unistd.h>
 #endif
 #include <assert.h>

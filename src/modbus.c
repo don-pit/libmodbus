@@ -26,7 +26,7 @@
 #include <errno.h>
 #include <limits.h>
 #include <time.h>
-#ifndef _MSC_VER
+#if !(_MSC_VER || __BORLANDC__)
 #include <unistd.h>
 #endif
 

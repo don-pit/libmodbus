@@ -26,15 +26,19 @@
 
 #ifndef _MSC_VER
 #include <stdint.h>
-#include <sys/time.h>
 #else
 #include "stdint.h"
+#endif
+
+#if !(_MSC_VER || __BORLANDC__)
+#include <sys/time.h>
+#else
 #include <time.h>
 #endif
 
 #include "modbus-version.h"
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) || defined(__BORLANDC__)
 # if defined(DLLBUILD)
 /* define DLLBUILD when building the DLL */
 #  define EXPORT __declspec(dllexport)
